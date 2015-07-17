@@ -24,18 +24,13 @@ Passenger JS has no dependencies. It does not require jQuery or any other librar
 3. instantiate Passenger JS inside a document ready function of your choosing. Here's a sample in vanilla JS:
 
 ### HTML ###
-
-```
-#!html
+```html
 <input id="password" name="password" type="password">
 <input id="password2" name="password2" type="password">
 ```
 
-
 ### JS ###
-```
-#!javascript
-
+```javascript
 (function() {
 	var myPwd1Config = {
 		field: "password" // password field ID
@@ -71,13 +66,10 @@ Passenger JS has no dependencies. It does not require jQuery or any other librar
 
 ### Check Password Contract Requirements ###
 At any point you may check to see if your Passenger instance has the password meeting the contract requirements. This is especially helpful when the user is trying to submit a form without having met the password requirements. Here's how one would check:
-```
-#!javascript
-
+```javascript
 myPassword2Checker.allPassed()
-
 ```
 
 ## Usage and Attributions ##
 
-This library was developed by Arthur Khachatryan (http://www.aspiremedia.net). It may be used freely on any website or web application provided that the attribution text is not removed from the top of the JS file utilized.
+This library was developed by Arthur Khachatryan (http://www.aspiremedia.net). It may be used freely on any website or web application provided that the attribution text is not removed from the top of the JS file utilized. For more details please review the license document.
