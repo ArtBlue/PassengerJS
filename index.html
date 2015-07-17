@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+	<title>Passenger</title>
+	<link rel='stylesheet' type='text/css' href="http://fonts.googleapis.com/css?family=Roboto:400,700">
+	<link rel="stylesheet" type="text/css" href="css/passenger.css">
+	<script type="text/javascript" src="js/passenger.js"></script>
+	<script type="text/javascript">
+(function() {
+	var myPwd1Config = {
+		field: "password" // password field ID
+		, styles: 'round'
+	};
+
+	// custom rules
+	var myPwd2Config = {
+		field: "password2" // password field ID
+		, contracts: [
+		{ name: "lowercase",   
+		    label: "Have at least one lower case character", 
+		  	rule: "[a-z]" }
+
+		, { name: "uppercase",   
+		    label: "Have at least one upper case character", 
+			rule: "[A-Z]" }
+
+		, { name: "number",      
+			label: "Have at least one number", 
+			rule: "[0-9]" }
+		]
+	};
+
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var myPassword1Checker = new Passenger(myPwd1Config);
+		var myPassword2Checker = new Passenger(myPwd2Config);
+
+		console.log(myPassword1Checker);
+		console.log(myPassword2Checker);
+
+		var passcheck1 = document.getElementById('passcheck1');
+		var passcheck2 = document.getElementById('passcheck2');
+
+		passcheck1.addEventListener("click", function(e) {
+			e.preventDefault();
+			console.log(myPassword1Checker.allPassed());
+		});
+
+		passcheck2.addEventListener("click", function(e) {
+			e.preventDefault();
+			console.log(myPassword2Checker.allPassed());
+		});
+
+	});
+
+	
+})();
+	</script>
+</head>
+<body>
+	<form class="container">
+		<fieldset>
+			<p>
+				<label for="password">Password</label>
+				<input id="password" name="password" type="password">
+			</p>
+			<p>
+				<button id="passcheck1">Check Password</button>
+			</p>
+			<p>
+				<label for="password2">Password 2</label>
+				<input id="password2" name="password2" type="password">
+			</p>
+			<p>
+				<button id="passcheck2">Check Password</button>
+			</p>
+			<h1>Passenger JS</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper luctus leo vel egestas. Pellentesque placerat augue justo, id consectetur quam fringilla sit amet. Maecenas id augue semper, molestie tellus nec, fermentum est. Donec nec quam quis nibh vulputate tristique at consequat tortor. Aenean laoreet quis felis a pulvinar. Quisque quis tristique nulla, non fringilla dolor. Integer tristique ac justo vitae consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras dapibus ac turpis id blandit. Vivamus congue quis ipsum a commodo. Vestibulum vitae nulla ultricies, efficitur eros ut, maximus magna.</p>
+
+			<p>Pellentesque elit libero, lacinia eget elit sit amet, cursus gravida ante. In tristique sed risus vitae mattis. Aenean cursus massa ac sem imperdiet laoreet. Ut accumsan fringilla sem. Nam felis mauris, condimentum eget eros nec, placerat aliquam ipsum. Maecenas id est eget orci hendrerit tincidunt. Suspendisse in viverra odio, sodales interdum mauris. Integer lacinia, dui at pretium suscipit, dolor magna volutpat magna, vitae porta mi eros et nisl. Sed velit urna, condimentum sit amet mi vitae, malesuada malesuada eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis posuere id neque id porttitor.</p>
+
+			<p>Nam ligula nibh, pretium pharetra lacus quis, luctus gravida nibh. Curabitur venenatis quis tellus id vulputate. Vestibulum cursus lobortis porttitor. Nunc tortor velit, malesuada vitae auctor a, volutpat at massa. Proin fringilla auctor mi, id rhoncus sem varius ut. Mauris malesuada, tellus in sodales sodales, tellus enim hendrerit nibh, nec viverra dui enim at metus. Nunc tincidunt accumsan imperdiet. Curabitur vel gravida erat. Aenean tristique in sapien pretium ullamcorper. Aenean vitae aliquet lectus, at dignissim justo. Nunc vehicula, nisl porttitor porttitor eleifend, mauris augue tempor orci, in pulvinar orci massa et ligula. Ut feugiat dolor vitae lacus convallis gravida. Sed sollicitudin ante congue, malesuada metus eu, viverra tellus. Aliquam et ex eros. Pellentesque at iaculis augue.</p>
+
+			<p>Duis ut consequat felis, ut lacinia tellus. Quisque convallis massa neque, ut maximus arcu mollis ut. Aenean faucibus augue blandit neque rutrum convallis. Praesent eget lacinia felis, et consequat odio. Pellentesque sed ligula quis enim varius rutrum. Vestibulum vel dui ultricies, suscipit orci vitae, consequat nibh. Praesent id massa porttitor, tempor erat at, pellentesque nisi. Quisque sit amet varius massa. Praesent id varius justo.</p>
+		</fieldset>
+	</form>
+</body>
+</html>

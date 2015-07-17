@@ -1,0 +1,168 @@
+/* Passenger Styles */
+html {
+  	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+fieldset {
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: #efefef;
+}
+
+label {
+	font-weight: 700;
+}
+
+input {
+	font-size: 16px;
+	margin: 0 10px;
+	padding: 3px;
+	border: 1px solid #ccc;
+}
+
+a {
+	font-size: 14px;
+}
+
+.passbox {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	padding: 10px;
+	background: #fff;
+	border: 3px solid #bbb;
+	box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.3);
+	/* control horizontal positioning */
+	margin-top: 15px;
+	font-size: 14px;
+	
+	/* by default, box is not visible (display:none|block does not allow for animation) */
+	visibility: hidden;
+	opacity: 0;
+	
+	/* animation */
+	transition-duration: 250ms;
+	-webkit-animation-name: fadeout;
+  			animation-name: fadeout;
+  	-webkit-animation-timing-function: easein; /* Chrome, Safari, Opera */
+    		animation-timing-function: easein;
+}
+
+.passbox.show {
+	visibility: visible;
+	opacity: 1;
+	
+	transition-duration: 250ms;
+	-webkit-animation-name: fade;
+  			animation-name: fade;
+  	-webkit-animation-timing-function: easeout; /* Chrome, Safari, Opera */
+    		animation-timing-function: easeout;
+}
+
+/* animation keyframes */
+@-webkit-keyframes fade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeout {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.passbox.round {
+	border-radius: 7px;
+}
+
+/* callout arrows */
+.passbox:after, 
+.passbox:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.passbox:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #fff;
+	border-width: 12px;
+	margin-left: -12px;
+}
+.passbox:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #bbb;
+	border-width: 17px;
+	margin-left: -17px;
+}
+
+.passbox ul {
+	list-style: none;
+	font-size: 14px;
+	margin: 10px 0 0 20px;
+	padding: 0;
+}
+
+.passbox ul li {
+	text-indent: -20px;
+	margin-bottom: 5px;
+	line-height: 1.25em;
+	color: #E53C3C;
+
+	/* animation */
+	transition-duration: 500ms;
+	-webkit-animation-name: transMet;
+  			animation-name: transMet;
+  	-webkit-animation-timing-function: easeout; /* Chrome, Safari, Opera */
+    		animation-timing-function: easeout;
+}
+
+.passbox ul li:before {
+	font-size: 14px;  /* size of bullet */
+	content: "\25CE"; /* bullet - bullseye */
+	/*vertical-align: middle;*/ /* normalize veritcal alignment if bullet is bigger than text */
+	margin-right: 5px;
+}
+
+.passbox ul li.met {
+	color: #000;
+
+	transition-duration: 500ms;
+	-webkit-animation-name: transMet;
+  			animation-name: transMet;
+  	-webkit-animation-timing-function: easein; /* Chrome, Safari, Opera */
+    		animation-timing-function: easein;
+}
+
+.passbox ul li.met:before {
+	color: #17A917;	
+	/* fisheye big */
+	content: "\25C9";
+
+	transition-duration: 500ms;
+	-webkit-animation-name: transMet;
+  			animation-name: transMet;
+  	-webkit-animation-timing-function: easein; /* Chrome, Safari, Opera */
+    		animation-timing-function: easein;
+}
+
+/**
+ * Theme Settings
+ * not required by library
+ */
+
+a.toggle_input_link,
+a.toggle_guide_link {
+	margin: 0 5px;
+}
