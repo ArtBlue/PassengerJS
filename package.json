@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "gulp tests"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
   "homepage": "https://github.com/ArtBlue/PassengerJS#readme",
   "devDependencies": {
     "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.1.3",
     "mocha": "^2.2.5"
   }
 }
