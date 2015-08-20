@@ -1,0 +1,31 @@
+{
+  "name": "passenger-js",
+  "version": "0.7.1",
+  "description": "Passenger JS is a UI/UX helper tool that allows users to create passwords that meet the minimum requirements of a website or web application with greater ease. Multiple indicators help users to identify what is missing by providing direct instantaneous feedback as users type. UX research has show that there is a notable user frustration with user password creation. This tool helps to alleviate that frustration through numerous proven UX principles.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "gulp tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtBlue/PassengerJS.git"
+  },
+  "keywords": [
+    "password",
+    "ux",
+    "ui"
+  ],
+  "author": "Arthur Khachatryan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArtBlue/PassengerJS/issues"
+  },
+  "homepage": "https://github.com/ArtBlue/PassengerJS#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
+}
