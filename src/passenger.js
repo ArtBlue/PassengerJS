@@ -77,7 +77,7 @@ Passenger.prototype.isPassFulfilled = function () {
 Passenger.prototype.createBox = function (elField, aContracts, config) {
     if (!config) {
         return console.log("Error: configuration is required to create passenger box.");
-    }console.log(config);
+    }
     var i = 0
         , sBoxID = config.field
         , sCSS = (config.styles) ? ' ' + config.styles : ''
@@ -199,19 +199,6 @@ Passenger.prototype.inputTypeToggle = function (elField) {
     }
 
     return elToggleLink;
-}
-
-/**
- * Are all contract rules passing?
- * @method      bAllPassed
- * @memberOf    Passenger
- * @param       {string}    sBoxID      unique id of the box
- * @param       {boolean}   bPassAll    all rules passed
- * @return      {boolean}               are all the contract rules passing?
- */
-Passenger.prototype.bAllPassed = function (sBoxID,bPassAll) {
-    // console.log(_instance);
-    // console.log(sBoxID,bPassAll);
 }
 
 /**
