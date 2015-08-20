@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ArtBlue/PassengerJS.svg?branch=master)](https://travis-ci.org/ArtBlue/PassengerJS)
+
 # Passenger JS #
 
 Passenger JS is a UI/UX password helper tool that allows users to create passwords that meet the minimum requirements of a website or web application with greater ease. Instead of multiple page refreshes to indicate to the user what is still missing from the set of password requirements, multiple direct indicators provide instantaneous feedback as users type, to help them come up with passwords that meet the requirements of a website or application. Alongside the password requirement fulfillment feature, there is also a password show toggle ability to allow users to see what they've already typed in the password field.
