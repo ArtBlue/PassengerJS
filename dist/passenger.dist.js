@@ -58,7 +58,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Passenger JS
 	 * @description Passenger JS is a UI/UX helper tool that allows users to create passwords that meet the minimum requirements of a website or web application with greater ease. Multiple indicators help users to identify what is missing by providing direct instantaneous feedback as users type. UX research has show that there is a notable user frustration with user password creation. This tool helps to alleviate that frustration through numerous proven UX principles.
 	 * @author  Arthur Khachatryan
-	 * @version 0.7.1
+	 * @version 0.7.2
 	 */
 
 	/**
@@ -133,7 +133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Passenger.prototype.createBox = function (elField, aContracts, config) {
 	    if (!config) {
 	        return console.log("Error: configuration is required to create passenger box.");
-	    }console.log(config);
+	    }
 	    var i = 0
 	        , sBoxID = config.field
 	        , sCSS = (config.styles) ? ' ' + config.styles : ''
@@ -255,19 +255,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    return elToggleLink;
-	}
-
-	/**
-	 * Are all contract rules passing?
-	 * @method      bAllPassed
-	 * @memberOf    Passenger
-	 * @param       {string}    sBoxID      unique id of the box
-	 * @param       {boolean}   bPassAll    all rules passed
-	 * @return      {boolean}               are all the contract rules passing?
-	 */
-	Passenger.prototype.bAllPassed = function (sBoxID,bPassAll) {
-	    // console.log(_instance);
-	    // console.log(sBoxID,bPassAll);
 	}
 
 	/**

@@ -1,6 +1,6 @@
 {
   "name": "passenger-js",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Passenger JS is a UI/UX helper tool that allows users to create passwords that meet the minimum requirements of a website or web application with greater ease. Multiple indicators help users to identify what is missing by providing direct instantaneous feedback as users type. UX research has show that there is a notable user frustration with user password creation. This tool helps to alleviate that frustration through numerous proven UX principles.",
   "main": "index.js",
   "directories": {
