@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PassengerJS Tests</title>
+  <link rel="stylesheet" type="text/css" href="../node_modules/mocha/mocha.css" />
+  <link rel="stylesheet" type="text/css" href="../src/css/passenger.css">
+</head>
+<body>
+  <div id="mocha"></div>
+
+  <script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+  <!--<script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>-->
+  <script type="text/javascript" src="../node_modules/mocha/mocha.js"></script>
+  <script type="text/javascript" src="../node_modules/chai/chai.js"></script>
+  <script type="text/javascript" src="../src/passenger.js"></script>
+
+  <script>mocha.setup('bdd')</script>
+  <script src="passenger.spec.js"></script>
+  <script>
+    mocha.checkLeaks();
+    mocha.globals(['jQuery']);
+    mocha.run();
+  </script>
+</body>
+</html>

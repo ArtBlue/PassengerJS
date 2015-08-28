@@ -1,0 +1,24 @@
+
+    <section class="suite">
+      <h1>Passenger Instantiation</h1>
+      <dl>
+        <dt>1. Is virtual DOM available for manipulation</dt>
+        <dd><pre><code>jsdom.env({
+	html: oConfig.hInput
+	, done: function(errors, window) {
+		expect(window.document).to.be.an('object');
+		done();
+	}
+});</code></pre></dd>
+        <dt>2. We can instantiate a new Passenger JS instance</dt>
+        <dd><pre><code>jsdom.env({
+	html: oConfig.hInput
+	, done: function(errors, window) {
+	 	var password1 = new Passenger({ field: 'password' });
+		expect(password1).to.exist;
+		expect(password1).to.be.an('object');
+		done();
+    }
+});</code></pre></dd>
+      </dl>
+    </section>
