@@ -62,7 +62,7 @@ var oConfig = {
 // tests to be run only in Node
 if (isNode) {
     describe('Passenger Instantiation (Node)', function() {
-        it.skip('1. Is virtual DOM available for manipulation', function (done) {
+        it('1. Is virtual DOM available for manipulation', function (done) {
             jsdom.env({
                 html: oConfig.hInput
                 , done: function(errors, window) {
@@ -72,7 +72,7 @@ if (isNode) {
             });
         });
 
-        it.skip('2. We can instantiate a new Passenger JS instance', function (done) {
+        it('2. We can instantiate a new Passenger JS instance', function (done) {
             jsdom.env({
                 html: oConfig.hInput
                 , done: function(errors, window) {
