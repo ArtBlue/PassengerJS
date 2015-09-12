@@ -1,35 +1,8 @@
-/* Passenger Styles */
-html {
-  	box-sizing: border-box;
-}
-
-body {
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-}
-
-fieldset {
-	display: block;
-	width: 600px;
-	margin: 0 auto;
-	border: 1px solid #ccc;
-	background: #efefef;
-}
-
-label {
-	font-weight: 700;
-}
-
-input {
-	font-size: 16px;
-	margin: 0 10px;
-	padding: 3px;
-	border: 1px solid #ccc;
-}
-
-a {
-	font-size: 14px;
-}
+/**
+ * Passenger JS Styles
+ * These styles are required in order for Passenger JS to work properly.
+ * You may override them at your own risk, just make sure you're not making things worse for the user.
+ */
 
 .passbox {
 	position: absolute;
