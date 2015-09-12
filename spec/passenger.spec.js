@@ -17,7 +17,7 @@ if (typeof module !== 'undefined' && module.exports) {
 
 if (isNode) {
     var chai = require("chai");
-    var jsdom = require("node-jsdom");
+    //var jsdom = require("node-jsdom");
     var fs = require("fs");
     var Passenger = (function() { return require('../src/passenger.js') });
 }
@@ -60,32 +60,32 @@ var oConfig = {
 }
 
 // tests to be run only in Node
-if (isNode) {
-    describe('Passenger Instantiation (Node)', function() {
-        it('1. Is virtual DOM available for manipulation', function (done) {
-            jsdom.env({
-                html: oConfig.hInput
-                , done: function(errors, window) {
-                    expect(window.document).to.be.an('object');
-                    done();
-                }
-            });
-        });
+// if (isNode) {
+//     describe('Passenger Instantiation (Node)', function() {
+//         it('1. Is virtual DOM available for manipulation', function (done) {
+//             jsdom.env({
+//                 html: oConfig.hInput
+//                 , done: function(errors, window) {
+//                     expect(window.document).to.be.an('object');
+//                     done();
+//                 }
+//             });
+//         });
 
-        it('2. We can instantiate a new Passenger JS instance', function (done) {
-            jsdom.env({
-                html: oConfig.hInput
-                , done: function(errors, window) {
-                    var password1 = new Passenger({ field: 'password' });
+//         it('2. We can instantiate a new Passenger JS instance', function (done) {
+//             jsdom.env({
+//                 html: oConfig.hInput
+//                 , done: function(errors, window) {
+//                     var password1 = new Passenger({ field: 'password' });
 
-                    expect(password1).to.exist;
-                    expect(password1).to.be.an('object');
-                    done();
-                }
-            });
-        });
-    });
-}
+//                     expect(password1).to.exist;
+//                     expect(password1).to.be.an('object');
+//                     done();
+//                 }
+//             });
+//         });
+//     });
+// }
 
 // tests to be run only in browsers
 if (isBrowser) {
