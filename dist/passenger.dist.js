@@ -2,7 +2,7 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define(factory);
+		define([], factory);
 	else {
 		var a = factory();
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
@@ -58,7 +58,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Passenger JS
 	 * @description Passenger JS is a UI/UX helper tool that allows users to create passwords that meet the minimum requirements of a website or web application with greater ease. Multiple indicators help users to identify what is missing by providing direct instantaneous feedback as users type. UX research has show that there is a notable user frustration with user password creation. This tool helps to alleviate that frustration through numerous proven UX principles.
 	 * @author  Arthur Khachatryan
-	 * @version 0.7.2
+	 * @version 0.7.3
 	 */
 
 	/**
@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        , nContracts         = aContracts.length
 	        , box                = _instance.createBox(ElField, aContracts, config)
 	        , elInputTypeToggle  = _instance.inputTypeToggle(ElField)
-	        , elBoxDisplayToggle = _instance.boxDisplayToggle(elInputTypeToggle, box)
+	        , elBoxDisplayToggle = _instance.boxDisplayToggle(elInputTypeToggle, box, config)
 	    ;
 
 	    _instance.sBoxID = config.field;
@@ -177,20 +177,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @memberOf    Passenger
 	 * @param       {DOMElement}    elAfter     the DOM element to create the toggle link after
 	 * @param       {DOMElement}    box         the DOM element of the box
+	 * @param       {object}        config      the configuration object from instantiation
+	 * @property    {string}        sBoxID      box id
 	 * @return      {DOMElement}                the DOM element of the toggle link
 	 */
-	Passenger.prototype.boxDisplayToggle = function (elAfter, box) {
+	Passenger.prototype.boxDisplayToggle = function (elAfter, box, config) {
 	    if (!elAfter || !box) {
 	        return console.log("Error: need both, the element to add box toggle link and the box itself");
 	    }
-	    var sBoxID = this.sBoxID
+	    var sBoxID = config.field
 	        , elBoxToggle = _after({
 	            el: elAfter
 	            , selNew: "a"
 	            , sID   : "passbox_guide_toggle_" + sBoxID
 	            , sCSS  : "toggle_guide_link"
 	            , sText : "Toggle Guide"
-	            , aAttr : [{ name: "href", val: "#"}]
+	            , aAttr : [{ name: "href", val: "javascript:void(0);"}]
 	        })
 	    ;
 
@@ -221,20 +223,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @method      inputTypeToggle
 	 * @memberOf    Passenger
 	 * @param       {DOMElement}    elField     the DOM element of input
+	 * @property    {string}        sBoxID      box id
 	 * @return      {DOMElement}                the DOM element of input
 	 */
 	Passenger.prototype.inputTypeToggle = function (elField) {
 	    if (!elField) {
 	        return console.log("Error: field element required.");
 	    }
-	    var sBoxID = this.sBoxID
+	    var sBoxID = elField.id
 	        , elToggleLink = _after({
 	            el: elField
 	            , selNew: "a"
 	            , sID   : "passbox_type_toggle_" + sBoxID
 	            , sText : "Toggle Password"
 	            , sCSS  : "toggle_input_link"
-	            , aAttr : [{ name: 'href', val: '#'}]
+	            , aAttr : [{ name: 'href', val: 'javascript:void(0);'}]
 	        })
 	    ;
 
