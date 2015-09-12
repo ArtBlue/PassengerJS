@@ -134,7 +134,7 @@ Passenger.prototype.boxDisplayToggle = function (elAfter, box) {
             , sID   : "passbox_guide_toggle_" + sBoxID
             , sCSS  : "toggle_guide_link"
             , sText : "Toggle Guide"
-            , aAttr : [{ name: "href", val: "#"}]
+            , aAttr : [{ name: "href", val: "javascript:void(0);"}]
         })
     ;
 
@@ -178,7 +178,7 @@ Passenger.prototype.inputTypeToggle = function (elField) {
             , sID   : "passbox_type_toggle_" + sBoxID
             , sText : "Toggle Password"
             , sCSS  : "toggle_input_link"
-            , aAttr : [{ name: 'href', val: '#'}]
+            , aAttr : [{ name: 'href', val: 'javascript:void(0);'}]
         })
     ;
 
