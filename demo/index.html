@@ -2,7 +2,83 @@
 <html>
 <head>
 	<title>Passenger</title>
+	<link rel='stylesheet' type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel='stylesheet' type='text/css' href="http://fonts.googleapis.com/css?family=Roboto:400,700">
+	<style type="text/css">
+.jumbotron .h1, 
+.jumbotron h1 {
+	color: #337ab7;
+}
+
+.form-container fieldset {
+	padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.toggle_input_link,
+.toggle_guide_link {
+	text-decoration: none;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.toggle_input_link:hover,
+.toggle_guide_link:hover {
+	text-decoration: none;
+	color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+.toggle_input_link:focus,
+.toggle_guide_link:focus {
+	text-decoration: none;
+	color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}
+
+.jumbotron p {
+	margin-bottom: 40px;
+}
+
+.jumbotron fieldset p {
+	margin-bottom: 0;
+}
+
+.jumbotron fieldset {
+	margin: 10px 0 30px 0;
+}
+
+.jumbotron ul {
+	font-size: 21px;
+	font-weight: 200;
+}
+
+	</style>
 	<link rel="stylesheet" type="text/css" href="../src/css/passenger.css">
 	<script type="text/javascript" src="../src/passenger.js"></script>
 	<script type="text/javascript">
@@ -57,31 +133,97 @@
 	</script>
 </head>
 <body>
-	<form class="container">
-		<fieldset>
-			<p>
-				<label for="password">Password</label>
-				<input id="password" name="password" type="password">
-			</p>
-			<p>
-				<button id="passcheck1">Check Password</button>
-			</p>
-			<p>
-				<label for="password2">Password 2</label>
-				<input id="password2" name="password2" type="password">
-			</p>
-			<p>
-				<button id="passcheck2">Check Password</button>
-			</p>
-			<h1>Passenger JS</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper luctus leo vel egestas. Pellentesque placerat augue justo, id consectetur quam fringilla sit amet. Maecenas id augue semper, molestie tellus nec, fermentum est. Donec nec quam quis nibh vulputate tristique at consequat tortor. Aenean laoreet quis felis a pulvinar. Quisque quis tristique nulla, non fringilla dolor. Integer tristique ac justo vitae consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras dapibus ac turpis id blandit. Vivamus congue quis ipsum a commodo. Vestibulum vitae nulla ultricies, efficitur eros ut, maximus magna.</p>
 
-			<p>Pellentesque elit libero, lacinia eget elit sit amet, cursus gravida ante. In tristique sed risus vitae mattis. Aenean cursus massa ac sem imperdiet laoreet. Ut accumsan fringilla sem. Nam felis mauris, condimentum eget eros nec, placerat aliquam ipsum. Maecenas id est eget orci hendrerit tincidunt. Suspendisse in viverra odio, sodales interdum mauris. Integer lacinia, dui at pretium suscipit, dolor magna volutpat magna, vitae porta mi eros et nisl. Sed velit urna, condimentum sit amet mi vitae, malesuada malesuada eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis posuere id neque id porttitor.</p>
 
-			<p>Nam ligula nibh, pretium pharetra lacus quis, luctus gravida nibh. Curabitur venenatis quis tellus id vulputate. Vestibulum cursus lobortis porttitor. Nunc tortor velit, malesuada vitae auctor a, volutpat at massa. Proin fringilla auctor mi, id rhoncus sem varius ut. Mauris malesuada, tellus in sodales sodales, tellus enim hendrerit nibh, nec viverra dui enim at metus. Nunc tincidunt accumsan imperdiet. Curabitur vel gravida erat. Aenean tristique in sapien pretium ullamcorper. Aenean vitae aliquet lectus, at dignissim justo. Nunc vehicula, nisl porttitor porttitor eleifend, mauris augue tempor orci, in pulvinar orci massa et ligula. Ut feugiat dolor vitae lacus convallis gravida. Sed sollicitudin ante congue, malesuada metus eu, viverra tellus. Aliquam et ex eros. Pellentesque at iaculis augue.</p>
+<div class="container">
 
-			<p>Duis ut consequat felis, ut lacinia tellus. Quisque convallis massa neque, ut maximus arcu mollis ut. Aenean faucibus augue blandit neque rutrum convallis. Praesent eget lacinia felis, et consequat odio. Pellentesque sed ligula quis enim varius rutrum. Vestibulum vel dui ultricies, suscipit orci vitae, consequat nibh. Praesent id massa porttitor, tempor erat at, pellentesque nisi. Quisque sit amet varius massa. Praesent id varius justo.</p>
-		</fieldset>
-	</form>
+	<div class="jumbotron">
+		
+		<h1>Passenger JS</h1>
+		<h2>The password generation helper that alleviates your user's frustration!</h2>
+		<p>
+			Passenger JS is a UI/UX password helper tool that allows users to create passwords that meet the minimum requirements of a website or web application with greater ease. Instead of multiple page refreshes to indicate to the user what is still missing from the set of password requirements, multiple direct indicators provide instantaneous feedback as users type, to help them come up with passwords that meet the requirements of a website or application. Alongside the password requirement fulfillment feature, there is also a password show toggle ability to allow users to see what they've already typed in the password field. When users are able to create passwords faster, you have lower bounce rates, higher conversions, and you know the rest...
+		</p>
+		<p>
+			UX research has shown that there is a notable user frustration with user password creation across a wide range of online applications. This tool helps to alleviate that frustration through numerous proven UX principles.
+		</p>
+
+		<form class="form-container form-horizontal">
+			<h4>Auto-verify password using default rule set:</h4>
+			<fieldset>
+				<p>
+					<label for="password" class="col-sm-2 control-label">Password</label>
+					<input id="password" name="password" type="password">
+					<button id="passcheck1" class="btn btn-primary">Check Password (*)</button>
+				</p>
+			</fieldset>
+
+			<h4>Auto-verify password using custom rule set:</h4>
+			<fieldset>
+				<p>
+					<label for="password2" class="col-sm-2 control-label">Password 2</label>
+					<input id="password2" name="password2" type="password">
+					<button id="passcheck2" class="btn btn-primary">Check Password (*)</button>
+				</p>
+			</fieldset>
+
+			<p>
+				* Passenger JS gives the developer access determine if the specific instance of Passenger JS has passed all the required checks. This gives the power back to the user to determine what to do with the information. You may want to highlight the password box, refuse form submission with a special message - you're free to determine how to direct the user in the instance the user has not fulfilled all the requirements of the field. Simply make the method call off the instance, like this (for the sake of this demo, check the console to see pass/fail state): <pre>myPassword2Checker.allPassed()</pre>
+			</p>
+		</form>
+
+		<h2>Features</h2>
+		<p>
+			<ul>
+				<li>Plug-n-play installation requiring nothing but a password field to be passed in during instantiation</li>
+				<li>Customizable through additional class inclusions</li>
+				<li>Ability to add more than one instance on a page</li>
+				<li>Ability to pass in custom password contract rules</li>
+				<li>No dependencies!</li>
+			</ul>
+		</p>
+
+		<h2>Details</h2>
+		<p>
+			<ul>
+				<li>Full Documentation (JSDocs): see the index file in the docs folder that came with this bundle.</li>
+				<li><a href="https://github.com/ArtBlue/PassengerJS" target="_blank">Github Repo</a></li>
+				<li>Continuous Integration: although the code has automated tests running to verify builds, those tests are skim and do not relay the true state of the build (see Unit Tests for more information).</li>
+				<li>Unit Tests: written in Chai/Mocha with a touch of jsdom for instantiation test in Node JS. For a true world test, unit tests should be run manually using /spec/passenger.spec.html as this library is tighly coupled with the DOM and requires a full browser for best real-world tests. To test locally, you will need to install Node JS, and all the required modules.</li>
+				<li>Credits: written by Arthur Khachatryan; <a href="http://www.aspiremedia.net" target="_blank">Check out my blog</a> and <a href="https://twitter.com/arthurk55" target="_blank">Follow Me on Twitter</a></li>
+				<li><a href="">License</a></li>
+			</ul>
+		</p>
+
+		<h2>License</h2>
+		<p>
+			<pre>
+The MIT License (MIT)
+
+Copyright (c) 2015 Arthur Khachatryan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+			</pre>
+		</p>
+		
+
+	</div>
+</div>
 </body>
 </html>
