@@ -6,6 +6,8 @@ Passenger JS is a UI/UX password helper tool that allows users to create passwor
 
 UX research has show that there is a notable user frustration with user password creation across a wide range of online applications. This tool helps to alleviate that frustration through numerous proven UX principles.
 
+![alt tag](http://www.aspiremedia.net/wp-content/uploads/2015/09/PassengerJS.png)
+
 ## Features ##
 1. Plug-n-play installation requiring nothing but a password field to be passed in during instantiation
 2. Customizable through additional class inclusions
